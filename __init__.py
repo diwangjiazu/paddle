@@ -11,6 +11,7 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
+from ppstructure.recovery.recovery_to_doc import sorted_layout_boxes, convert_info_docx
 from .paddleocr import *
 import importlib.metadata as importlib_metadata
 

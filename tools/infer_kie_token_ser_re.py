@@ -166,7 +166,7 @@ def preprocess():
     logger = get_logger()
 
     # check if set use_gpu=True in paddlepaddle cpu version
-    use_gpu = config["Global"]["use_gpu"]
+    use_gpu = False #config["Global"]["use_gpu"]
 
     device = "gpu:{}".format(dist.ParallelEnv().dev_id) if use_gpu else "cpu"
     device = paddle.set_device(device)

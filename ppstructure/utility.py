@@ -27,7 +27,7 @@ import math
 
 def init_args():
     parser = infer_args()
-
+    #parser.add_argument("--image_dir", type=str, default="../imgs")
     # params for output
     parser.add_argument("--output", type=str, default="./output")
     # params for table structure
@@ -41,11 +41,11 @@ def init_args():
         default="../ppocr/utils/dict/table_structure_dict_ch.txt",
     )
     # params for layout
-    parser.add_argument("--layout_model_dir", type=str)
+    parser.add_argument("--layout_model_dir", type=str,default="../../ppstructure/inference/picodet_lcnet_x1_0_fgd_layout_cdla_infer")
     parser.add_argument(
         "--layout_dict_path",
         type=str,
-        default="../ppocr/utils/dict/layout_dict/layout_publaynet_dict.txt",
+        default="../../ppocr/utils/dict/layout_dict/layout_publaynet_dict.txt",
     )
     parser.add_argument(
         "--layout_score_threshold", type=float, default=0.5, help="Threshold of score."
